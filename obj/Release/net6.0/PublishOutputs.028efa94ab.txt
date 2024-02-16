@@ -1,0 +1,7 @@
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/TournamentApp
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/appsettings.Development.json
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/appsettings.json
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/TournamentApp.dll
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/TournamentApp.deps.json
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/TournamentApp.runtimeconfig.json
+/home/pepito/AzureProjects/TournamentApp/bin/Release/net6.0/publish/TournamentApp.pdb
