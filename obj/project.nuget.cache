@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7RHmPy7c+zKUft5RqknGWMa2cQ1PQ2kH8epLk7UEJXmYfEVwehs8qdzhZDshrV1w6WlFVRrfe4PMGEinbDw8vg==",
+  "dgSpecHash": "7vANFgqydrATJ2vuzq2bd4bd/25uz4GgvgYTBAR6yqslBQNAXX9mx64IgGqd+dGmFBD6CT4qs/EMWoKEinpGpA==",
   "success": true,
-  "projectFilePath": "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj",
+  "projectFilePath": "/home/pepito/TournamentApp/TournamentApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
