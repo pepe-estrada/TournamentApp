@@ -12,27 +12,32 @@ namespace TournamentApp.Controllers
     {
         public static String GetSummary()
         {
-            // TODO: Implement your logic here
-
-            SqlConnection connection = new SqlConnection("Data Source=pepdev-server.database.windows.net,1433;Initial Catalog=pepdev-database;User ID=pepdev-server-admin;Password=0DVX873DVV377251$");
-            
-            connection.Open();
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.leads", connection))
-            {
-                StringBuilder sb = new StringBuilder();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        sb.AppendLine(String.Format("{0}, {1}", reader["Id"], reader["Name"]));
-                    }
+            try{
+                // TODO: Implement your logic here
+                string conn = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+                if(String.IsNullOrEmpty(conn)){
+                    return "Connection string is empty";
                 }
-                connection.Close();
-                return sb.ToString();
+                SqlConnection connection = new SqlConnection(conn);
+                
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.leads", connection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            sb.AppendLine(String.Format("{0}, {1}, {2}, {3}, {4}", reader["Id"], reader["FirstName"],reader["LastName"],reader["Email"],reader["Phone"]));
+                        }
+                    }
+                    connection.Close();
+                    return sb.ToString();
+                }
             }
-        }
-        public static String GetString(){
-            return Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+            catch (Exception e){
+                return e.Message;
+            }
         }
     }
 }

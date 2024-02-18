@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TournamentApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cbc2186a9dd5111b841c8bc67e54c456b59ee4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3e9d6ff2fa80f6f62584014ff12bbb7d720260f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TournamentApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TournamentApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
