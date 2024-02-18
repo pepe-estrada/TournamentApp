@@ -23,5 +23,8 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+Environment.GetEnvironmentVariable("AZURE_STORAGEBLOB_RESOURCEENDPOINT");
+Environment.GetEnvironmentVariable("AZURE_KEYVAULT_RESOURCEENDPOINT");
+Environment.GetEnvironmentVariable("AZURE_KEYVAULT_SCOPE");
 app.Run();
