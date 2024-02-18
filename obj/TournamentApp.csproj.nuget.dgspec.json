@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/pepito/TournamentApp/TournamentApp.csproj": {}
+    "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj": {}
   },
   "projects": {
-    "/home/pepito/TournamentApp/TournamentApp.csproj": {
+    "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pepito/TournamentApp/TournamentApp.csproj",
+        "projectUniqueName": "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj",
         "projectName": "TournamentApp",
-        "projectPath": "/home/pepito/TournamentApp/TournamentApp.csproj",
+        "projectPath": "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj",
         "packagesPath": "/home/pepito/.nuget/packages/",
-        "outputPath": "/home/pepito/TournamentApp/obj/",
+        "outputPath": "/home/pepito/AzureProjects/TournamentApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pepito/.nuget/NuGet/NuGet.Config"
@@ -51,9 +51,17 @@
               "target": "Package",
               "version": "[4.6.0, )"
             },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.19.1, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.5, )"
+            },
+            "Microsoft.Web.Administration": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             }
           },
           "imports": [

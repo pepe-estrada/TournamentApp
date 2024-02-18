@@ -13,7 +13,9 @@ namespace TournamentApp.Controllers
         public static String GetSummary()
         {
             // TODO: Implement your logic here
-            SqlConnection connection = new SqlConnection(Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING"));
+
+            SqlConnection connection = new SqlConnection("Data Source=pepdev-server.database.windows.net,1433;Initial Catalog=pepdev-database;User ID=pepdev-server-admin;Password=0DVX873DVV377251$");
+            
             connection.Open();
             using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Leads", connection))
             {
