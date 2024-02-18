@@ -17,7 +17,7 @@ namespace TournamentApp.Controllers
             SqlConnection connection = new SqlConnection("Data Source=pepdev-server.database.windows.net,1433;Initial Catalog=pepdev-database;User ID=pepdev-server-admin;Password=0DVX873DVV377251$");
             
             connection.Open();
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Leads", connection))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.leads", connection))
             {
                 StringBuilder sb = new StringBuilder();
                 using (SqlDataReader reader = command.ExecuteReader())
