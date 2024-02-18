@@ -15,7 +15,7 @@ namespace TournamentApp.Controllers
             // TODO: Implement your logic here
             SqlConnection connection = new SqlConnection(Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING"));
             connection.Open();
-            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Tournaments", connection))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Leads", connection))
             {
                 StringBuilder sb = new StringBuilder();
                 using (SqlDataReader reader = command.ExecuteReader())
