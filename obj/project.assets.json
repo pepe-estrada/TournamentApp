@@ -2124,11 +2124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj",
+      "projectUniqueName": "/home/pepito/TournamentApp/TournamentApp.csproj",
       "projectName": "TournamentApp",
-      "projectPath": "/home/pepito/AzureProjects/TournamentApp/TournamentApp.csproj",
+      "projectPath": "/home/pepito/TournamentApp/TournamentApp.csproj",
       "packagesPath": "/home/pepito/.nuget/packages/",
-      "outputPath": "/home/pepito/AzureProjects/TournamentApp/obj/",
+      "outputPath": "/home/pepito/TournamentApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/pepito/.nuget/NuGet/NuGet.Config"
