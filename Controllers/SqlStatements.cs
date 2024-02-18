@@ -31,5 +31,8 @@ namespace TournamentApp.Controllers
                 return sb.ToString();
             }
         }
+        public static String GetString(){
+            return Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+        }
     }
 }
