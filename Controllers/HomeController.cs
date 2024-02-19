@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using TournamentApp.Functions.AzureClients;
 using TournamentApp.Models;
 
 namespace TournamentApp.Controllers;
@@ -27,5 +28,15 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+    [HttpPost]
+    public IActionResult SubmitInformation()
+    {
+        string conn = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING")!;
+        if(String.IsNullOrEmpty(conn)){
+            return BadRequest("Connection string is empty");
+        }
+        LocalSqlClient.SendInformation(conn);
+        return Ok();
     }
 }
