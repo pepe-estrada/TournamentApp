@@ -42,8 +42,15 @@ public class HomeController : Controller
             _logger.LogInformation("Connection string is empty");
             return BadRequest("Connection string is empty");
         }
-        LocalSqlClient.SendInformation(conn);
-        _logger.LogInformation("Information submitted!");
+        try
+        {
+            LocalSqlClient.SendInformation(conn);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error submitting information");
+            return BadRequest("Error submitting information");
+        }
         return Ok();
     }
 }

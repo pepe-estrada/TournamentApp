@@ -2,11 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 <head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/styles.css" type="text/css" />
 </head>
 <div class="text-center">
     <h1 class="display-4">Welcome!</h1>
-    <p>Hi! My name is Mr. Pepe Estrada and I will be your primary instructor. I am a 4th Degree Black Belt and have been training in Taekwondo for 19 years! I started with the Monk's when I was 8 years old and stayed with them as a student and instructor until I left for college. 
+    <p><img src="~/Content/headshot.jpg" alt="Pepito Estrada" class="rounded d-block float-end headshot"/>
+    Hi! My name is Mr. Pepe Estrada and I will be your primary instructor. I am a 4th Degree Black Belt and have been training in Taekwondo for 19 years! I started with the Monk's when I was 8 years old and stayed with them as a student and instructor until I left for college. 
         Since returning to NWA, I have been working with Master Fairy Degener on my long term goals both as a martial artist and as an instructor. I am extremely excited to come back home to the Monk's and the new Fitness Center and I am looking forward to working with you!</p>
     <p>The information you submit in this document will help me gague interest in the program and allow me to keep you informed of our timeline. We are working hard to get classes up and running as soon as possible and we appreciate your understanding!</p>
     <form method="post" action="/Home/ThankYou">
@@ -15,8 +17,27 @@
         <input type="text" name="Email" placeholder="Email" class="form-control" />
         <input type="text" name="Phone" placeholder="Phone" class="form-control" />
         <input type="text" name="Age" placeholder="Age" class="form-control" />
-        <input type="text" name="Belt" placeholder="Belt" class="form-control" />
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar for selecting rank">
+            <div class="btn-group me-2 " role="group" aria-label="First group">
+               <button type="button" class="btn btn-primary" style="background-color:white">White</button>
+                <button type="button" class="btn btn-primary" style="background-color:Orange">Orange</button>
+                <button type="button" class="btn btn-primary" style="background-color:Yellow">Yellow</button>
+                <button type="button" class="btn btn-primary" style="background-color:#4E4B2C">Camo</button>
+                <button type="button" class="btn btn-primary" style="background-color:Green">Green</button>
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-primary" style="background-color:Purple">Purple</button>
+                <button type="button" class="btn btn-primary" style="background-color:Blue">Blue</button>
+                <button type="button" class="btn btn-primary" style="background-color:Brown">Brown</button>
+                <button type="button" class="btn btn-primary" style="background-color:Red">Red</button>    
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-primary" style="background:linear-gradient(130deg, Red 52%, Black 48%)">Rec. Black Belt</button>
+                <button type="button" class="btn btn-primary" style="background-color:Black;color:gold">1st Degree</button>
+                <button type="button" class="btn btn-primary" style="background-color:Black;color:gold">2nd Degree</button>
+            </div>
+        </div>
         <input type="text" name="Suggestions" placeholder="Suggestions" class="form-control" />
-        <input type="submit" value="Submit" class="btn btn-primary" />
+        <input type="submit" value="Submit" class="btn btn-primary submission" />
     </form>
 </div>

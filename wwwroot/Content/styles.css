@@ -1,3 +1,38 @@
 .display-4 {
     color: blue;
 }
+.headshot {
+    float: right;    
+    margin: 0 0 15px 15px;
+    max-width: 20%;
+    height: auto;
+}
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15seaseinfinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.form-control{
+    margin: 1px;
+}
+.submission{
+    margin: 15px;
+}
+.btn-toolbar{
+    text-align: center;
+}
