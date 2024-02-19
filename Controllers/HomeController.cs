@@ -25,6 +25,7 @@ public class HomeController : Controller
     }
     public IActionResult ThankYou()
     {
+        SubmitInformation();
         return View();
     }
 
@@ -33,14 +34,16 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    [HttpPost]
+
     public IActionResult SubmitInformation()
     {
         string conn = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING")!;
         if(String.IsNullOrEmpty(conn)){
+            _logger.LogInformation("Connection string is empty");
             return BadRequest("Connection string is empty");
         }
         LocalSqlClient.SendInformation(conn);
+        _logger.LogInformation("Information submitted!");
         return Ok();
     }
 }
