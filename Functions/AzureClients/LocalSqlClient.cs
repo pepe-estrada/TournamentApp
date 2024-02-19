@@ -12,7 +12,7 @@ namespace TournamentApp.Functions.AzureClients
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Leads] (ID, LastName, FirstName, DOB, Belt, Email, Phone) VALUES (@LastName, @FirstName, @DOB, @Belt, @Email, @Phone)", connection))
+                using (SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Leads] (LastName, FirstName, DOB, Belt, Email, Phone) VALUES (@LastName, @FirstName, @DOB, @Belt, @Email, @Phone)", connection))
                 {
                     command.Parameters.AddWithValue("@LastName", "Doe");
                     command.Parameters.AddWithValue("@FirstName", "John");
